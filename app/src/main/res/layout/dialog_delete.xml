@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="130dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="#A8A8A8"
+
+        >
+
+
+    </View>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure want to delete\n this note?"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="18sp"
+        android:gravity="center"
+
+
+        ></TextView>
+
+    <TextView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="20dp"
+        android:id="@+id/btYes"
+        android:background="@drawable/red_button"
+        android:text="Yes"></TextView>
+
+    <TextView
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:id="@+id/btNo"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/grey_button"
+        android:text="No"></TextView>
+</LinearLayout>

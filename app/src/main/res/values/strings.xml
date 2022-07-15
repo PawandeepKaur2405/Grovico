@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Grovico</string>
+    <string name="let_s_get_started">Let\'s Get Started</string>
+    <string name="getStartedMessage">Sign up or login to get started with the classroom video</string>
+    <string name="terms_and_condition_message">By Signing up or logging in I accept the term of services, community guidelines and the Privacy policy</string>
+    <string name="circle_bg_CONTENT_DESCP">CIRCLE_BG</string>
+    <string name="continue_with_email_address">Continue with email address</string>
+    <string name="continue_with_google">Continue with google</string>
+    <string name="continue_with_facebook">Continue with facebook</string>
+    <string name="continue_with_twitter">Continue with twitter</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="Cources">
+        <item>B.Tech</item>
+        <item>BCA</item>
+        <item>BSC</item>
+        <item>M.Tech</item>
+        <item>MCA</item>
+        <item>MSC</item>
+
+</string-array>
+    <string-array name="Semester">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="Section">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+
+    </string-array>
+    <string name="title_activity_lecture_home">LectureHome</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="setting_icon">setting_icon</string>
+    <string name="students">Students</string>
+    <string name="_0_students">0 Students</string>
+    <string name="switch_to_student">Switch to Student</string>
+    <string name="switch_to_teacher">Switch to Teacher</string>
+    <string name="join_a_new_class">Join a new Class</string>
+    <string name="logout">Logout</string>
+    <string name="delete">delete</string>
+</resources>

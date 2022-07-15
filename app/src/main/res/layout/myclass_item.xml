@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:id="@+id/class_groupBtn"
+    android:background="@drawable/white_roundfilled"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/course_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/googlesans_medium"
+        android:text="course"
+        android:textColor="@color/greyText"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/subject_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/googlesans_medium"
+        android:text="subject"
+        android:textColor="@color/darkMainColor"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_label" />
+
+    <TextView
+        android:id="@+id/stu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:fontFamily="@font/googlesans_light"
+        app:layout_constraintHorizontal_bias="0"
+        android:textColor="@color/darkGreyText"
+        android:maxLines="1"
+        android:paddingEnd="60dp"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject_label" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/stu"
+        app:layout_constraintTop_toBottomOf="@+id/stu">
+
+        <ImageView
+            android:id="@+id/user1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:src="@drawable/sample" />
+
+        <ImageView
+            android:id="@+id/user2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="-15dp"
+            android:layout_weight="1"
+            android:src="@drawable/sample" />
+
+        <ImageView
+            android:id="@+id/user3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="-15dp"
+            android:layout_weight="1"
+            android:src="@drawable/sample" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/total_show"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="-15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/total_all"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:background="#f2f2f4"
+                android:foregroundGravity="center_horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="+43"
+                android:textColor="@color/darkMainColor"
+                android:textSize="12sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

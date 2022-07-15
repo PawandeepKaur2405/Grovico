@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".screens.notes.EditNotesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/fui_transparent"
+            android:backgroundTint="@color/fui_transparent"
+            android:minHeight="?attr/actionBarSize"
+            android:outlineSpotShadowColor="#9F9F9F"
+            android:paddingTop="20dp"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/border_input_bg"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Title..."
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:maxLines="1"
+            android:textColor="@color/darkMainColor"
+            android:textSize="18sp"
+
+            />
+
+        <EditText
+            android:id="@+id/etSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/border_input_bg"
+            android:cursorVisible="true"
+            android:maxLines="1"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Subtitle..."
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:textColor="@color/darkMainColor"
+            android:textSize="18sp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:id="@+id/ivRedDot"
+                android:background="@drawable/red_dot"
+
+                android:layout_height="25dp"
+                />
+
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:id="@+id/ivYellowDot"
+                android:background="@drawable/yellow_dot"
+                android:layout_height="25dp"
+                android:layout_marginStart="12dp"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:id="@+id/ivGreenDot"
+                android:background="@drawable/green_dot"
+                android:layout_height="25dp"
+                android:layout_marginStart="12dp"
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etNoteBody"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:padding="16dp"
+            android:background="@drawable/border_input_bg"
+            android:cursorVisible="true"
+            android:ems="10"
+            android:fontFamily="@font/roboto_light"
+            android:hint="Note..."
+            android:inputType="textMultiLine"
+            android:textColor="@color/darkMainColor"
+            android:textSize="18sp"
+
+            />
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/saveNotes"
+        style="@style/FloatingActionButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="32dp"
+        android:backgroundTint="@color/mainColor"
+        android:src="@drawable/done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</FrameLayout>

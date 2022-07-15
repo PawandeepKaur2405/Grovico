@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/getStartedFragment">
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.example.projectx.screens.GetStartedFragment"
+        android:label="fragment_get_started"
+        tools:layout="@layout/fragment_get_started" >
+        <action
+            android:id="@+id/action_getStartedFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_getStartedFragment_to_teachersFragment"
+            app:destination="@id/teachersFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_getStartedFragment_to_studentFragment"
+            app:destination="@id/studentFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.projectx.screens.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_teachersFragment"
+            app:destination="@id/teachersFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailsFragment_to_studentFragment"
+            app:destination="@id/studentFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/teachersFragment"
+        android:name="com.example.projectx.screens.teachers.TeachersFragment"
+        android:label="fragment_teachers"
+        tools:layout="@layout/fragment_teachers" >
+        <action
+            android:id="@+id/action_teachersFragment_to_homeNotesFragment"
+            app:destination="@id/homeNotesFragment" />
+        <action
+            android:id="@+id/action_teachersFragment_to_bottomSheetFragment"
+            app:destination="@id/bottomSheetFragment" />
+        <action
+            android:id="@+id/action_teachersFragment_to_meetingHome"
+            app:destination="@id/meetingHome" />
+        <action
+            android:id="@+id/action_teachersFragment_to_classGroupFragment"
+            app:destination="@id/classGroupFragment" />
+        <action
+            android:id="@+id/action_teachersFragment_to_teacherAssignmentFragment"
+            app:destination="@id/teacherAssignmentFragment" />
+        <action
+            android:id="@+id/action_teachersFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_teachersFragment_to_getStartedFragment"
+            app:destination="@id/getStartedFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_teachersFragment_to_studentFragment"
+            app:destination="@id/studentFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_teachersFragment_to_joinClassFragment"
+            app:destination="@id/joinClassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeNotesFragment"
+        android:name="com.example.projectx.screens.notes.HomeNotesFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_home_notes" >
+        <action
+            android:id="@+id/action_homeNotesFragment_to_editNotesFragment"
+            app:destination="@id/editNotesFragment" />
+        <action
+            android:id="@+id/action_homeNotesFragment_to_createNoteFragment"
+            app:destination="@id/createNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createNoteFragment"
+        android:name="com.example.projectx.screens.notes.CreateNoteFragment"
+        android:label="Create Note"
+        tools:layout="@layout/fragment_create_note" >
+        <action
+            android:id="@+id/action_createNoteFragment_to_homeNotesFragment"
+            app:destination="@id/homeNotesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNotesFragment"
+        android:name="com.example.projectx.screens.notes.EditNotesFragment"
+        android:label="Edit Note"
+        tools:layout="@layout/fragment_edit_notes" >
+        <action
+            android:id="@+id/action_editNotesFragment_to_homeNotesFragment"
+            app:destination="@id/homeNotesFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.example.projectx.entities.Notes" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottomSheetFragment"
+        android:name="com.example.projectx.screens.BottomSheetFragment"
+        android:label="fragment_bottom_sheet"
+        tools:layout="@layout/fragment_bottom_sheet" />
+    <activity
+        android:id="@+id/meetingHome"
+        android:name="com.example.projectx.screens.lecturehall.MeetingHome"
+        android:label="activity_meeting_home"
+        tools:layout="@layout/activity_meeting_home" />
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.example.projectx.screens.student.StudentFragment"
+        android:label="fragment_student"
+        tools:layout="@layout/fragment_student" >
+        <action
+            android:id="@+id/action_studentFragment_to_homeNotesFragment"
+            app:destination="@id/homeNotesFragment" />
+        <action
+            android:id="@+id/action_studentFragment_to_meetingHome"
+            app:destination="@id/meetingHome" />
+        <action
+            android:id="@+id/action_studentFragment_to_studentAssignment"
+            app:destination="@id/studentAssignment"
+            app:enterAnim="@animator/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_studentFragment_to_joinClassFragment"
+            app:destination="@id/joinClassFragment" />
+        <action
+            android:id="@+id/action_studentFragment_to_classGroupFragment"
+            app:destination="@id/classGroupFragment" />
+        <action
+            android:id="@+id/action_studentFragment_to_getStartedFragment"
+            app:destination="@id/getStartedFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_studentFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_studentFragment_to_teachersFragment"
+            app:destination="@id/teachersFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentAssignment"
+        android:name="com.example.projectx.screens.student.StudentAssignment"
+        android:label="fragment_student_assignment"
+        tools:layout="@layout/fragment_student_assignment" >
+        <action
+            android:id="@+id/action_studentAssignment_to_assignmentDetailFragment"
+            app:destination="@id/assignmentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherAssignmentFragment"
+        android:name="com.example.projectx.screens.teachers.TeacherAssignmentFragment"
+        android:label="fragment_teacher_assignment"
+        tools:layout="@layout/fragment_teacher_assignment" >
+        <action
+            android:id="@+id/action_teacherAssignmentFragment_to_createAssignmentFragment"
+            app:destination="@id/createAssignmentFragment" />
+        <action
+            android:id="@+id/action_teacherAssignmentFragment_to_assignmentDetailFragment"
+            app:destination="@id/assignmentDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAssignmentFragment"
+        android:name="com.example.projectx.screens.CreateAssignmentFragment"
+        android:label="fragment_create_assignment"
+        tools:layout="@layout/fragment_create_assignment" />
+    <fragment
+        android:id="@+id/assignmentDetailFragment"
+        android:name="com.example.projectx.screens.AssignmentDetailFragment"
+        android:label="fragment_assignment_detail"
+        tools:layout="@layout/fragment_assignment_detail" >
+        <argument
+            android:name="assignmentData"
+            app:argType="com.example.projectx.models.Assignment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classGroupFragment"
+        android:name="com.example.projectx.screens.ClassGroupFragment"
+        android:label="fragment_class_group"
+        tools:layout="@layout/fragment_class_group" >
+        <action
+            android:id="@+id/action_classGroupFragment_to_studentFragment"
+            app:destination="@id/studentFragment" />
+        <action
+            android:id="@+id/action_classGroupFragment_to_teachersFragment"
+            app:destination="@id/teachersFragment" />
+        <action
+            android:id="@+id/action_classGroupFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinClassFragment"
+        android:name="com.example.projectx.screens.student.JoinClassFragment"
+        android:label="fragment_join_class"
+        tools:layout="@layout/fragment_join_class" >
+        <action
+            android:id="@+id/action_joinClassFragment_to_studentFragment"
+            app:destination="@id/studentFragment"
+            app:popUpTo="@id/nav_graph.xml"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.projectx.chat.ChatFragment"
+        android:label="ChatFragment" />
+</navigation>

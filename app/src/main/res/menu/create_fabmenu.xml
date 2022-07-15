@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/create_newClass"
+        android:title="Create a new class"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/shedule_meet"
+        android:title="Schedule a Meeting"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/create_timeTable"
+        android:title="Your Notes"
+        app:showAsAction="never" />
+
+    <item
+        android:id = "@+id/give_assignment"
+        android:title="Assignments"
+        app:showAsAction="never"
+        />
+</menu>
